@@ -1,0 +1,20 @@
+<?xml version="1.0"?>
+
+<PropertyList>
+<sim>
+    <model>
+        <livery>
+            <name type="string">Army</name>
+            <texture>Liveries/ARMY.png</texture>
+            <amb type="float">0.1</amb>
+            <refl type="float">-0.95</refl>
+        </livery>
+        <registration>
+            <red>0.1</red>
+            <green>0.2</green>
+            <blue>0.1</blue>
+        </registration>
+        <display-callsign>1</display-callsign>
+    </model>
+</sim>
+</PropertyList>

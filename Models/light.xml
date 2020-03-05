@@ -1,0 +1,64 @@
+<PropertyList>
+
+ <path>light.ac</path>
+
+<animation>
+   <type>light</type>
+   <light-type>spot</light-type>
+   <name>Landinglights</name>
+   <object-name>LightCone</object-name>
+   <nopreview/>
+   <position>
+     <x>0</x>
+     <y>0.0</y>
+     <z>0</z>
+   </position>
+   <direction>
+     <x>-1</x>
+     <y>0.0</y>
+     <z>0</z>
+   </direction>
+   <ambient>
+     <r>5</r>
+     <g>5</g>
+     <b>5</b>
+     <a>1.0</a>
+   </ambient>
+   <diffuse>
+     <r>5</r>
+     <g>5</g>
+     <b>5</b>
+     <a>1.0</a>
+   </diffuse>
+   <specular>
+     <r>0.7</r>
+     <g>0.7</g>
+     <b>0.7</b>
+     <a>1.0</a>
+   </specular>
+   <attenuation>
+     <c>2</c>
+    <l>0.002</l>
+    <q>0.0025</q>
+   </attenuation>
+   <exponent>30.0</exponent>
+   <cutoff>500</cutoff>
+   <near-m>0.5</near-m>
+   <far-m>500</far-m>
+ </animation>
+
+<animation>
+   <type>select</type>
+   <object-name>LightCone</object-name>
+   <condition>
+      <and>
+         <greater-than>
+            <property>/sim/rendering/shaders/lights</property>
+            <value>0.0</value>
+         </greater-than>
+         <property>systems/electrical/outputs/landing-lights</property>
+      </and>
+   </condition>
+</animation>
+
+</PropertyList>

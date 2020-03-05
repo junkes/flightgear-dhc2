@@ -1,0 +1,20 @@
+<?xml version="1.0"?>
+
+<PropertyList>
+<sim>
+    <model>
+        <livery>
+            <name type="string">Norcanair</name>
+            <texture>Liveries/NCA.png</texture>
+            <amb type="float">0.1</amb>
+            <refl type="float">-0.1</refl>
+        </livery>
+        <registration>
+            <red>0.8</red>
+            <green>0.8</green>
+            <blue>0.8</blue>
+        </registration>
+        <display-callsign>1</display-callsign>
+    </model>
+</sim>
+</PropertyList>

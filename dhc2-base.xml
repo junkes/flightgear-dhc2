@@ -1,0 +1,303 @@
+<?xml version="1.0"?>
+
+<PropertyList>
+
+    <sim>
+        <aircraft-version>2.3.0</aircraft-version>
+
+        <rating>
+            <FDM type="int">3</FDM>
+            <systems type="int">2</systems>
+            <cockpit type="int">4</cockpit>
+            <model type="int">4</model>
+        </rating>
+
+        <long-description>
+          As the saying goes, nothing can replace a Beaver except
+          another Beaver.  This quintessential bush plane was produced
+          between 1947 and 1967 and still flies today, notably in its
+          native Canada and in Alaska.  More than half a century after
+          production ceased, existing airframes are still being
+          refurbished and lovingly rebuilt at great expense.  Some
+          examples have been re-engined with turbines but this model
+          represents the original Wasp Junior radial piston engine.
+          You can choose floats or wheels and you can tow gliders over
+          multiplayer with this aircraft.
+        </long-description>
+
+        <tags>
+            <tag>transport</tag>
+            <tag>bush-plane</tag>
+            <tag>1940s</tag>
+            <tag>1950s</tag>
+            <tag>1960s</tag>
+            <tag>amphibious</tag>
+            <tag>castering-wheel</tag>
+            <tag>fixed-gear</tag>
+            <tag>high-wing</tag>
+            <tag>stol</tag>
+            <tag>tail-dragger</tag>
+            <tag>propeller</tag>
+            <tag>piston</tag>
+            <tag>radial</tag>
+            <tag>single-engine</tag>
+            <tag>supercharged</tag>
+            <tag>variable-pitch</tag>
+            <tag>tow</tag> <!-- yes, we can tow gliders -->
+        </tags>
+
+        <view n="0">
+            <name>Cockpit</name>
+            <type>lookfrom</type>
+            <internal type="bool">true</internal>
+            <config>
+                <x-offset-m type="double">-0.34</x-offset-m>
+                <y-offset-m type="double">0.69</y-offset-m>
+                <z-offset-m type="double">-0.64</z-offset-m>
+                <pitch-offset-deg>-15</pitch-offset-deg>
+                <default-field-of-view-deg type="double">65.0</default-field-of-view-deg>
+                <limits>
+                    <enabled type="bool">true</enabled>
+                    <left>
+                        <heading-max-deg type="double">90</heading-max-deg>
+                        <x-offset-max-m type="double">0.10</x-offset-max-m>
+                        <x-offset-threshold-deg type="double">75</x-offset-threshold-deg>
+                    </left>
+                    <right>
+                        <heading-max-deg type="double">180</heading-max-deg>
+                        <x-offset-max-m type="double">0.22</x-offset-max-m>
+                        <x-offset-threshold-deg type="double">75</x-offset-threshold-deg>
+                    </right>
+                </limits>
+            </config>
+        </view>
+
+        <chase-distance-m>-20</chase-distance-m>
+
+        <airport>
+            <runways>
+                <start-offset-m>20</start-offset-m>
+            </runways>
+        </airport>
+
+        <systems>
+            <electrical>
+                <path></path>
+            </electrical>
+            <!-- <autopilot> -->
+                <!-- <path>Aircraft/dhc2/Systems/copilot.xml</path> -->
+            <!-- </autopilot> -->
+        </systems>
+
+        <sound>
+            <path>Aircraft/dhc2/Sound/dhc2-sound.xml</path>
+            <Nvolume type="double">1</Nvolume>
+        </sound>
+
+        <model>
+            <yokes-visible type="bool" archive="y">1</yokes-visible>
+        </model>
+        <allow-toggle-cockpit archive="y">true</allow-toggle-cockpit>
+
+        <checklists include="Systems/checklist.xml"/>
+
+        <multiplay>
+            <generic>
+                <string n="0" alias="/sim/aero"/>
+                <string n="1" alias="/sim/multiplay/callsign"/>
+                <float n="0" alias="/controls/doors/position-norm[0]"/>
+                <float n="1" alias="/controls/doors/position-norm[1]"/>
+                <float n="2" alias="/controls/doors/position-norm[2]"/>
+                <float n="3" alias="/controls/doors/position-norm[3]"/>
+                <float n="4" alias="/sim/model/registration/red"/>
+                <float n="5" alias="/sim/model/registration/green"/>
+                <float n="6" alias="/sim/model/registration/blue"/>
+                <float n="7" alias="/position/altitude-agl-ft"/>
+                <int n="0" alias="/sim/model/display-callsign"/>
+            </generic>
+        </multiplay>
+    </sim>
+
+    <controls>
+        <fuel>
+            <switch-position type="int">0</switch-position>
+            <wing-tank-position type="int">0</wing-tank-position>
+            <wobble-pump type="int">0</wobble-pump>
+            <pump-lever-pos type="double">0.0</pump-lever-pos>
+        </fuel>
+        <engines>
+            <engine>
+                <carb-heat-lever type="double">0</carb-heat-lever>
+                <cutoff-lever type="double">1</cutoff-lever>
+                <oil-dilution type="bool">0</oil-dilution>
+            </engine>
+        </engines>
+        <electric>
+            <battery-switch type="bool">0</battery-switch>
+            <starter-switch type="bool">0</starter-switch>
+            <engine>
+                <generator>0</generator>
+            </engine>
+        </electric>
+        <lighting>
+            <cabin-light type="bool">0</cabin-light>
+            <cockpit-light type="bool">0</cockpit-light>
+            <nav-lights>0</nav-lights>
+            <instrument-lights>0</instrument-lights>
+            <landing-lights>0</landing-lights>
+        </lighting>
+        <gear>
+            <brake-parking>1</brake-parking>
+        </gear>
+        <flight>
+            <auto-coordination archive="y">1</auto-coordination>
+        </flight>
+        <doors>
+            <open n="0" type="bool">0</open>
+            <open n="1" type="bool">0</open>
+            <open n="2" type="bool">0</open>
+            <open n="3" type="bool">0</open>
+        </doors>
+    </controls>
+
+    <consumables>
+        <fuel>
+            <tank n="0">
+                <name>Fuel PSI</name>
+                <hidden type="bool">1</hidden>
+            </tank>
+            <tank n="1">
+                <name>Front</name>
+            </tank>
+            <tank n="2">
+                <name>Center</name>
+            </tank>
+            <tank n="3">
+                <name>Rear</name>
+            </tank>
+            <tank n="4">
+                <name>L Wingtip</name>
+            </tank>
+            <tank n="5">
+                <name>R Wingtip</name>
+            </tank>
+        </fuel>
+    </consumables>
+
+    <input>
+        <keyboard>
+            <key n="126">
+                <name>~</name>
+                <desc>Wobble pump</desc>
+                <binding>
+                    <command>property-assign</command>
+                    <property>/controls/fuel/wobble-pump</property>
+                    <value>1</value>
+                </binding>
+            </key>
+            <key n="268">
+                <name>radio</name>
+                <binding>
+                    <command>nasal</command>
+                    <script>dialogs.Radio.open()</script>
+                </binding>
+            </key>
+            <key n="115">
+                <name>s</name>
+                <desc>Fire Starter</desc>
+                <binding>
+                    <command>property-assign</command>
+                    <property>controls/electric/starter-switch</property>
+                    <value>1</value>
+                </binding>
+                <mod-up>
+                    <binding>
+                        <command>property-assign</command>
+                        <property>controls/electric/starter-switch</property>
+                        <value>0</value>
+                    </binding>
+                </mod-up>
+            </key>
+            <key n="91">
+                <name>[</name>
+                <desc>Decrease flaps</desc>
+                <binding>
+                    <command>property-adjust</command>
+                    <property>/controls/flight/flaps</property>
+                    <step type="double">-0.083333</step>
+                    <min>0</min>
+                    <max>1.0</max>
+                </binding>
+            </key>
+            <key n="93">
+                <name>]</name>
+                <desc>Increase flaps</desc>
+                <binding>
+                    <command>property-adjust</command>
+                    <property>/controls/flight/flaps</property>
+                    <step type="double">0.083333</step>
+                    <min>0</min>
+                    <max>1.0</max>
+                </binding>
+            </key>
+            <key n="71">
+                <name>G</name>
+                <desc>Gear down</desc>
+                <binding>
+                    <condition>
+                        <and>
+                            <not>
+                                <property>gear/gear[2]/wow</property>
+                            </not>
+                            <not>
+                                <property>gear/gear[3]/wow</property>
+                            </not>
+                        </and>
+                    </condition>
+                    <command>property-assign</command>
+                    <property>controls/gear/gear-down</property>
+                    <value>1</value>
+                </binding>
+            </key>
+            <key n="103">
+                <name>g</name>
+                <desc>Gear Up</desc>
+                <binding>
+                    <condition>
+                        <and>
+                            <not>
+                                <property>gear/gear[2]/wow</property>
+                            </not>
+                            <not>
+                                <property>gear/gear[3]/wow</property>
+                            </not>
+                        </and>
+                    </condition>
+                    <command>property-assign</command>
+                    <property>controls/gear/gear-down</property>
+                    <value>0</value>
+                </binding>
+            </key>
+        </keyboard>
+    </input>
+
+    <instrumentation>
+        <comm>
+            <power-btn type="bool">1</power-btn>
+            <volume>1</volume>
+        </comm>
+    </instrumentation>
+
+    <nasal>
+        <dhc2>
+            <file>Aircraft/dhc2/Nasal/dhc2.nas</file>
+        </dhc2>
+        <Electrical>
+            <file>Aircraft/dhc2/Nasal/Electrical.nas</file>
+        </Electrical>
+        <dialogs>
+            <file>Aircraft/dhc2/Nasal/dialogs.nas</file>
+        </dialogs>
+    </nasal>
+
+</PropertyList>
